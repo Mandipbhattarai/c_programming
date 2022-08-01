@@ -1,0 +1,388 @@
+    				C programming
+
+
+
+1. %c => character
+2. %d => integer
+3. %f => float
+4. %l=> long
+5. %lf => double
+6. %Lf => long double
+
+
+
+
+constant 
+=> whose value doesn't changes
+=> defined by using const 
+
+
+
+
+c if else statements
+=> Control statements
+=> It is used to perform operaations based onsome cnditions.
+types of if statements 
+=> If statement 
+=> If else statement 
+=> If-else if laddder
+=> Nested if 
+
+Syntax for if else 
+if(condition){
+    if true
+}
+else 
+{
+    if false
+}
+
+
+if else if syntax
+if(condition1){
+    code 1
+}
+else if(condition2) 
+{
+    code 2
+}
+. 
+.
+.
+else 
+{
+    code n;
+}
+
+
+Switch statement
+\\ int a=2;
+switch(a){
+    Case 2:
+    printf("Value is 2");
+    break;
+
+    Case 3: 
+    printf("Value is 3");
+    
+    default:
+    printf("Nothing matched")
+}
+
+
+Rules for switch statement
+=> Switch expression must be an int or char 
+=> Case vakue must be an integer or a character
+=> Case must come inside switch
+=> break is not a must
+
+                        Loops
+
+Repeatation of Program.
+Advantages of using loops
+=> Code reusability
+=> Saves time
+=> Traversing 
+
+Basic syntax of loop 
+loops starts > check the condition
+                        if true( execute loop)
+                        if false( exit the loop)
+
+Types of loop
+=> do while loop 
+=> while loop 
+=> for loop
+
+                                    Do While Loop 
+=> do while loop executes atleast once 
+
+do{
+    //code to be executed
+}
+while (condition);
+
+// 
+int i=0;
+do{
+    i=i+1;
+    printf("%d", i);
+}
+while(i<10);
+//
+
+
+                                        While Loop
+While ( condition ){
+   // code to be executed 
+}
+// 
+int i=0 
+while(i<30){
+    printf("%d\n", i);
+    i=i+1;
+}
+
+For Loop 
+Syntax :
+for (expression 1 ; expression 2 ; expression 3 ){
+    //code to be run
+}
+
+expression 1: 
+=> initialization of the loop variable 
+=> we can initialize more than one variable in expression1.
+=> expression 1 is optional
+
+expression 2:
+=> this is conditional expression.
+=> it can have more than once, executes all but last one is considered as loop ..others are treated as statements
+=> can perform task of expression 1 and 3.
+=>we can pass 0 and non 0 value both.
+
+expression 3:
+=>it is used to update the loop variable.
+=> We can update more than one variable at the same time.
+=> it is optional
+
+
+//
+int i;
+for (i=0 ; i<5 ; i++;){
+printf("%d",i);
+}
+
+// i++ = i+1
+
+Break statement
+=> Used to bring the program control out of the loop 
+=> used inside loops or switch statements
++=> can be used eith loops and switch case expressions.
+
+Continue statement
+=> Used to bring program control to the next iteration of the looop.
+=> This statement skips some code inside the loop and Continues with the next iteration.
+=> it is used to skip some lines of code for a condition.
+
+
+GOTO statement
+=> also known as jump statement
+=> used to transfer program control to predefined label.
+=> Its uses is avoided since it causes confussion for fellow programmers in understanding the code.
+=> it is preferred when we need to break multiple loops using single statement at the same time.
+
+
+syntax
+label:
+.
+.
+.
+goto label:
+
+typecasting
+=> convert one data type to another
+syntax
+(type) value;
+
+e.g. for integer 6: (int) 6;
+
+Function
+=> used to divide large program into smaller pieces.
+=>can be called multiple times to provide reusability and modularity to the C program.
+=> Also called procedure or subroutine.
+
+syntax:
+
+return_type Function_name(data_type parameter 1, data type parameter 2,....)
+{
+    //code to be executed
+}
+
+example:
+int printstar(){
+    printf("*");
+    return 0;
+}
+
+Advantages of using Function
+=> we can avoid rewriting same logic through functions.
+=> We can divide work among programmers using functions.
+=> We can easily debug a program using functions.
+
+
+Declaration, Definition and Call 
+=> A function is declared to tell a compiler about its existence.                                // decalre the function in the start 
+=> A function is defiend to get some task done.                                // function's actual implimentation
+=> A function is called in order to be used.                                // calling the function 
+
+Types of Function 
+=> Library functions- functions included in c header files. e.g printf , scanf , etc
+=> User defined function- function created by c programmer to reduce complexity of a program. e.g. int sum(int a, int b);
+
+Recursive Functions:
+
+Recursion is the process in which a function calls itself directly or indirectly. And the corresponding function or function which calls itself is called as recursive function.
+
+=>Recursive functions or Recursion is a process when a function calls a copy of itself to work on smaller problems.
+=>Any function which calls itself is called recursive function.
+=>This makes life of programmer easy by dividing complex problem into simple or easier problems.
+=>A termination condition is imposed on such functions to stop them executing copies of themselves forever or infinitely.
+=>Any problem which can be solved recursively can also be solved iteratively.
+
+Recursions are used to solve tower of Hanoi, Fibonacci series, factorial finding etc.
+
+
+Base condition in recursion :
+=> The case at which the function doesn’t recur is called the base case.
+
+Recursive Case :
+=> The instances where the function keeps calling itself to perform a subtask i.e. solving problem by dividing it in small parts, is called the recursive case.
+
+Now let me summarize whole recursions. So Recursion is a process in which any function keeps calling itself till any termination condition is satisfied and in simple words you can think Recursions as same like iteration because in both of them repetition occurs till any condition is satisfied or becomes false.
+
+And the most important thing during using recursions is it’s termination condition because most of time the condition given in recursive function is wrong and because of that the function is executed infinitely or for forever.
+
+
+Arrays :
+An array is a collection of data items of the same data type. And it is also known as subscript variable.
+=> Items are stored at contiguous memory locations in Arrays.
+=> It can also store the collection of derived data types such as pointers, structures etc.
+=> The C Language places no limits on the number of dimensions in an array i.e. we can create any no. of dimension array E.g. 2d array, 3d array etc.
+
+Most Commonly used dimensions of Array :
+
+=> A one-dimensional array is like a list.
+=> A two-dimensional array is like a table.
+
+Some texts refer to one-dimensional arrays as vectors and two-dimensional arrays as matrices and use the general term Arrays when the no. of dimensions is unspecified or unimportant.
+
+
+
+Why do we need Arrays ?
+
+Code that use arrays for managing large no. of same type variables is more organized and readable.
+=> Arrays allow us to create many variables by just a single line. It means there is no need to create or specify each and every variable.
+
+Advantage of Arrays :
+=> It is used to represent multiple data items of same type by using only single name.
+=> Accessing an item in a given array is very fast.
+
+Properties of Array :
+=> Data in an array is stored in contiguous memory locations in RAM.
+=> Each element of an array is of same size i.e. their data types are same so memory consumed by each is also same.
+=> Any element of the array with given index can be accessed very quickly by using its address which can be calculated using the base address and the index.
+
+Index No. – It is the special type of no. which allows us to access variables of Arrays i.e. index no. provides a method to access each element of an array in a program.
+
+ 
+Now let me tell you in brief about Arrays :
+So as we already seen that array is a collection of data items and generally 
+we use arrays when we have to make lots of variables at that time instead of
+creating each variable, so we can easily declare one array and can access it’s
+elements using it’s index no. and can do whatever we wish to do with that data.
+
+So, that’s the use of arrays. And not only this we should have a good command over arrays 
+because it is one of the most important topic in C language. Generally if we access 
+each element of array at that time we use loops for fast calculations or operations.
+
+And yeah one more thing i.e. you must have seen some memes on programmers i.e. programmers
+count from 0 not from 1. So the reason behind these memes is this only i.e. Arrays. As in 
+arrays we do indexing from 0 onwards na that’s why these memes are created for programmers. :)
+ 
+Pointers :
+
+Before discussing about pointers let me tell you when we define and initialize a variable at that time we come to know about these things :
+
+=> Memory block i.e. variable get some space in RAM and we can think of that as a block.
+=> Name of memory block or Variable’s name
+=> Content of that block i.e. value in that variable
+=> Address of memory block i.e. unique address which allows us to access that variable.
+
+We can print address of any variable by using printf function as :
+printf(“%d”,&variable_name);
+
+
+Pointer :
+
+=> Pointer is a variable that contains address of another variable. It means it is a variable but this variable contains address or memory address of any other variable.
+=> It can be of type int, char, array, function, or any other pointer.
+=> Its size depends on architecture.
+=> Pointers in C Language can be declared using *(asterisk symbol).
+
+After checking above example you will understand the basics of pointers.
+
+So, pointers are nothing just a variable which stores the address of other variables and by using pointers we can access other variables too and can even manipulate them.
+
+Now let’s see about some of the operators which we use with Pointers :
+
+Address of Operator (&) :
+· It is a unary operator.
+
+· Operand must be the name of the variable.
+
+· & operator gives address no. of variable.
+
+· & is also known as “Referencing Operator”.
+
+
+Indirection Operator :
+· * is indirection operator.
+· It is also known as “Dereferencing Operator”.
+· It is a unary operator.
+· It takes address as an argument.
+· * returns the content/container whose address is it’s argument. 
+
+//
+#include<stdio.h>
+
+int main()
+{
+	int a=5;
+	printf("%d\n",&a );
+	printf("%d",a );
+	return 0;
+}
+//
+In above example you will see that we printed variable ‘a’ address and its value. So in second printf statement you can see we used two unary operators i.e. * and "&" operator. As we know unary operator associativity is from right to left so first of all & of operator will be resolved and then the address of variable ‘a’ will be the argument of * operator. That’s how we can print values or can use these Address of Operator and Indirection Operator.
+
+//
+#include<stdio.h>
+int main()
+{
+	int x,*a;
+	return 0
+}
+//
+
+
+When * (indirection operator) is written before any pointer variable like (*a) then that whole variable resembles like original variable i.e. the variable to whom the pointer is pointing. 
+Or,
+We can say that *a pointer becomes the variable whose address is in a pointer.
+
+Null Pointer :
+=> A pointer that is not assigned any value but NULL is known as NULL pointer.
+=> In computer programming NULL pointer is a pointer that does not point to any object, variable or function.
+=> We can use it to initialize a pointer variable when that pointer variable isn’t assigned any valid memory address yet.
+=> int *ptr = NULL;
+
+Uses of Pointers:
+· Dynamic Memory Allocation
+· Arrays, Functions and Structures
+· Return multiple values from a function
+· Pointer reduces the code and improves the performance
+
+That’s all about basics of Pointers. In next tutorial we will discuss about Pointers Arithmetic i.e. how to manipulate pointers values.
+
+
+Pointer Arithmetic
+There are four arithmetic operatorsthat can be used on pointers:
+=> ++
+=> --
+=> +
+=> -
+
+
+
+
+
+
